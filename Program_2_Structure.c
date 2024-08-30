@@ -31,13 +31,14 @@ typedef struct
 typedef struct 
 {
     unsigned int bit0: 1;
+    unsigned int bit1: 2;
 
 }data_bit;
 
 
 
 
-int main(){
+int main(void){
     data_3 data_01;
     data_01.f=10;
     data_3 data_02 ={45,15.5};
@@ -53,6 +54,9 @@ int main(){
 
     data_bit prueba_bit;
     prueba_bit.bit0=1;
+    prueba_bit.bit1=0b10;
+
+    printf("bit1: %u\n", prueba_bit.bit1); // Imprime bit1 (que puede ser 0, 1, 2 o 3)
 
     if(prueba_bit.bit0){
         printf("bit0 is to n");
