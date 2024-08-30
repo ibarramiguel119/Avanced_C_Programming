@@ -26,6 +26,15 @@ typedef struct
 }data_3;
 
 
+//Estruct typedef bitfield
+
+typedef struct 
+{
+    unsigned int bit0: 1;
+
+}data_bit;
+
+
 
 
 int main(){
@@ -41,6 +50,16 @@ int main(){
     printf("Valores de data_02: f = %d, g = %.2f\n", data_02.f, data_02.g);
     printf("Valores de x: a = %.2f, b = %d\n", x.a, x.b);
     printf("Valores de y: a = %.2f, b = %d\n", y.a, y.b);
+
+    data_bit prueba_bit;
+    prueba_bit.bit0=1;
+
+    if(prueba_bit.bit0){
+        printf("bit0 is to n");
+    }else{
+        printf("bit0 is to 0");
+    }
+    
 
     return 0;
 }
